@@ -1,0 +1,649 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background-color: #43b0f1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  border-radius: 5px;
+}
+
+.logo-heading {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+
+.logo-link:hover {
+  color: #ffdd57;
+}
+
+.navbar-brand{
+  font-size: 1rem;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-list-items a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu-list-items a:hover {
+  color: #ffdd57;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #43b0f1;
+  color: #fff;
+  text-align: center;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.greet-heading {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.my-heading {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.sub-heading {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.intro-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  /* padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease; */
+  width: 160px; /* Same width for both buttons */
+  height: 50px; /* Same height for both buttons */
+  padding: 12px 0;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.common-btn {
+  background-color: #fff;
+  color: #43b0f1;
+  border: 2px solid #fff;
+}
+
+.common-btn:hover {
+  background-color: #43b0f1;
+  color: #fff;
+}
+
+.ghost-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  margin-left: 10px;
+}
+
+.ghost-btn:hover {
+  background-color: #fff;
+  color: #43b0f1;
+}
+
+/* Education section */
+.education-section {
+  padding: 80px 10%;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.education-section h2 {
+  font-size: 32px;
+  color: #43b0f1;
+  margin-bottom: 20px;
+}
+
+.education-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.education-box {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.education-box h3 {
+  font-size: 22px;
+  color: #007bff;
+}
+
+.education-box p {
+  font-size: 18px;
+  color: #666;
+  margin: 5px 0;
+}
+
+
+
+/* Portfolio Section */
+.experience-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #43b0f1;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  flex: 1 1 calc(33.33% - 40px);
+  max-width: calc(33.33% - 40px);
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.flip-card-front {
+  background-color: #43b0f1;
+  color: #fff;
+}
+
+.flip-card-back {
+  background-color: #fff;
+  color: #333;
+  transform: rotateY(180deg);
+  border: 2px solid #43b0f1;
+}
+
+/* Services Section */
+.services {
+  padding: 60px 20px;
+  background-color: #f4f7fa;
+}
+
+.services-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.my-row {
+  display:flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.my-col {
+  flex: 1 1 calc(33.33% - 40px);
+  max-width: calc(33.33% - 40px);
+}
+
+.my-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.my-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  font-size: 2rem;
+  color: #43b0f1;
+  margin-bottom: 10px;
+}
+
+.blue-text {
+  color: #43b0f1;
+}
+
+.small-para {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-heading {
+  font-size: 1.2rem;
+  color: #43b0f1;
+  margin-bottom: 10px;
+}
+
+.contact-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Centering the Heading */
+.contact-section h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* Contact Content - Side by Side */
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Contact Details Section */
+.contact-details {
+  width: 45%;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+#contactForm {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.greet-heading{
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 15px;
+  width: 100%; 
+}
+/* Input & Textarea Styling */
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 10px  4px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button Styling */
+#contactForm button {
+  background: #43b0f1;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contactForm button:hover {
+  background: #007bff;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #43b0f1;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-text {
+  margin-bottom: 10px;
+}
+
+.social-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-menu-item a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-menu-item a:hover {
+  color: #ffdd57;
+}
+
+.back-to-top-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.back-to-top-btn:hover {
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 2px ;
+  padding:5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #43b0f1;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 20px;
+  }
+
+  .menu.active {
+      display: flex;
+  }
+
+  .col {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+
+  .contact-content {
+      flex-direction: column;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background: #333;
+      width: 100%;
+      left: 0;
+      top: 50px;
+      text-align: center;
+  }
+  .nav-links.active {
+      display: flex;
+  }
+  .hamburger {
+      display: block;
+  }
+}
+
+/* For large screens (1400px and below) */
+@media (max-width: 1400px) {
+  .hero-section {
+    padding: 60px;
+  }
+  .portfolio-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For medium-large screens (1200px and below) */
+@media (max-width: 1200px) {
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* For tablets and smaller laptops (950px and below) */
+@media (max-width: 950px) {
+  .hero-section {
+    padding: 40px;
+  }
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+  .contact-form {
+    width: 90%;
+  }
+}
+
+/* For small tablets and large mobile devices (750px and below) */
+@media (max-width: 750px) {
+  .hero-section {
+    padding: 30px;
+  }
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+  .about-text {
+    font-size: 0.95rem;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .nav-links {
+    flex-direction: column;
+  }
+}
+
+/* For mobile screens (600px and below) */
+@media (max-width: 600px) {
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
+  .about-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* For small mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px;
+    text-align: center;
+  }
+  .hero-section h1 {
+    font-size: 1.3rem;
+  }
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+  .portfolio-container {
+    gap: 15px;
+  }
+  .about-text {
+    font-size: 0.85rem;
+  }
+  #contactForm {
+    width: 90%;
+  }
+}
+
+/* For extra small screens (360px and below) */
+@media (max-width: 360px) {
+  .hero-section h1 {
+    font-size: 1.1rem;
+  }
+  .hero-section p {
+    font-size: 0.8rem;
+  }
+  .about-text {
+    font-size: 0.8rem;
+  }
+}
